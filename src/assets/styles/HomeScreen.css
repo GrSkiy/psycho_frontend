@@ -1,0 +1,166 @@
+.home-screen {
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  justify-content: end;
+  flex-direction: column;
+  display: flex;
+  padding-bottom: 24px;
+}
+
+.header-subtitle h2 {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: left;
+}
+
+.header-title h1 {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header {
+  margin-bottom: 6px;
+  margin-bottom: 32px;
+}
+
+.main-actions .action-button {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e0e0e0; /* Нейтральный цвет фона */
+  color: #333;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none; /* Убираем подчеркивание у ссылок-кнопок */
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.main-actions .action-button.green {
+  background-color: #C6F334;
+  padding: 15px 20px;
+  color: #000;
+  height: 100px;
+  border-radius: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 6px;
+}
+
+.main-actions .action-button:active {
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+}
+
+.main-actions .action-button.pink {
+  background-color: #C1A0F9;
+  padding: 15px 20px;
+  color: #000;
+  margin-right: 6px;
+  width: 30%;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.main-actions .action-button.purple {
+  background-color: #FFC5DE;
+  padding: 15px 20px;
+  color: #000;
+  width: 70%;
+  text-align: left;
+  display: flex;
+  flex-direction: column-reverse; 
+  text-align: left;
+  border-radius: 20px;
+}
+
+.action-button-low-container {
+  display: flex;
+  flex-direction: row;
+  height: 180px;
+}
+
+.topics-section {
+  margin-top: 20px;
+  margin-left: -24px;
+  margin-right: -24px;
+
+}
+
+.topics-section h3 {
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: left;
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.topics-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding-top: 10px;
+  overflow-x: auto;
+  padding-left: 24px;
+
+  /* Скрытие скроллбара */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.topics-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Добавляем псевдоэлемент для создания отступа справа */
+.topics-list::after {
+  content: '';
+  /* Создаем невидимый блок шириной в наш отступ */
+  min-width: 24px; 
+  height: 1px; /* Любая минимальная высота */
+  flex-shrink: 0; /* Чтобы он не сжимался */
+}
+
+.topic-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 80px; /* Минимальная ширина элемента темы */
+}
+
+.topic-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #b3e5fc; /* Голубой фон для примера */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem; /* Для иконки или текста внутри, если будет */
+  color: #01579b;
+  border: 2px solid #81d4fa;
+  transition: transform 0.2s ease;
+}
+
+.topic-item:hover .topic-circle {
+  transform: scale(1.1);
+}
+
+.topic-item span {
+  font-size: 0.9rem;
+  color: #444;
+} 

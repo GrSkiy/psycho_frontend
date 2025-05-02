@@ -1,8 +1,29 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* max-width: 1280px; <-- Можно убрать, если ширина должна быть 100% */
+  /* margin: 0 auto; <-- Убираем, если не нужно центрирование */
+  /* padding: 2rem; <-- Убираем старый padding */
+  /* text-align: center; <-- Убираем, если не нужно центрирование текста глобально */
+  height: 100%; /* Убедимся, что root тоже 100% */
+}
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* padding: 24px; <-- Убираем общий padding */
+}
+
+/* Модифицируем main, чтобы он занимал оставшееся место */
+.App main {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.App header {
+   /* Стили для шапки, если нужно */
+   flex-shrink: 0; /* Запрещаем шапке сжиматься */
+   /* Добавляем padding к шапке */
+   padding: 24px 24px 0 24px; /* Сверху, по бокам, снизу 0 */
 }
 
 .logo {
