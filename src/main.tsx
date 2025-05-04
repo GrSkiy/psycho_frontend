@@ -13,6 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App />}>
           <Route index element={<HomeScreen />} /> 
           <Route path="chat" element={<ChatScreen />} /> 
+          <Route path="chat/:chatId" element={<ChatScreen />} />
         </Route>
       </Routes>
     </BrowserRouter>

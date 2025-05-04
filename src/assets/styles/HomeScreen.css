@@ -163,4 +163,43 @@
 .topic-item span {
   font-size: 0.9rem;
   color: #444;
+}
+
+.history-section {
+  margin-top: 30px;
+  padding: 0 20px; /* Отступы по бокам, как у других секций */
+}
+
+.history-section h3 {
+  font-size: 1.1rem;
+  color: #555; /* Или другой цвет */
+  margin-bottom: 15px;
+  text-align: center; /* Или left */
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column; /* Отображаем элементы в столбик */
+  gap: 10px; /* Пространство между элементами */
+}
+
+.history-item {
+  display: block; /* Чтобы занимал всю ширину */
+  background-color: #f0f0f0; /* Светлый фон для элемента истории */
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: #333; /* Цвет текста */
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  text-align: center; /* Или left */
+}
+
+.history-item:hover {
+  background-color: #e0e0e0; /* Немного темнее при наведении */
+}
+
+.loading-indicator {
+    text-align: center;
+    padding: 20px;
+    color: #888;
 } 

@@ -111,6 +111,11 @@ function ChatScreen() {
                     text: receivedData.text,
                 };
                 setMessages((prevMessages) => [...prevMessages, newMessage]);
+            } else if (receivedData.type === 'chat_created') {
+                // Обработка нового типа сообщения
+                console.log("Chat session created with ID:", receivedData.chat_id);
+                // Возможно, здесь нужно что-то сделать с chat_id,
+                // например, сохранить его в состоянии или ref, если он нужен дальше.
             } else if (receivedData.type !== 'history') {
                console.warn('Received unexpected data format or type:', receivedData);
             }
